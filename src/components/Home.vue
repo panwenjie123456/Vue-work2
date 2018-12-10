@@ -1,14 +1,14 @@
 <template>
   <div class="hero">
-    <h1 class="vue-title">Homer for President !!</h1>
+    <h1 class="vue-title">Bookmanage App !!</h1>
 
     <table align="center">
       <tr>
         <td>
-          <p class="lead"><b><i>Time for a change !!</i></b>
-          <p>Out with Boring Prumt - Giving has never been so easy.</p>
-          <p>Just click <a href ="/donate">here</a> to go to</p>
-          <p>the Donation page and empty your wallet</p>
+          <p class="lead"><b><i>For manager</i></b>
+          <p>Manage books here</p>
+          <p>Just click <a href ="#/Newbook">here</a> to go to</p>
+          <p>the Newbook page and do the update</p>
         </td>
         <td>
           <img src="../assets/homer.gif" alt="description here" />
@@ -17,7 +17,7 @@
     </table>
 
     <p></p>
-    <p class="lead">This is the homepage of your <b>MEVN</b> Web app</p>
+    <p class="lead">This is the homepage of  <b>the</b> Book Manage app</p>
   </div>
 </template>
 

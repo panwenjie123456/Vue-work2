@@ -15,7 +15,7 @@ describe('Manage Books page', () => {
             'https://nmgb.herokuapp.com/books/', book)
         })
       })
-    cy.visit('http://weary-smoke.surge.sh')
+    cy.visit('http://makeshift-mine.surge.sh')
     // Click Manage Books navbar link
     cy.get('.navbar-nav:nth-child(1)')
       .find('.nav-item:nth-child(2)').click()
@@ -29,8 +29,8 @@ describe('Manage Books page', () => {
     cy.get('button').contains('Delete').click()
     cy.get('tbody').find('tr').should('have.length', 3)
   })
-  
-  
+
+
   it('allows a book to be edited', () => {
     cy.get('tbody').find('tr').should('have.length', 4)
     // Click trash/delete link of 3rd donation in list
@@ -51,8 +51,8 @@ describe('Manage Books page', () => {
     cy.get('button').contains('Update book').click()
     cy.contains('Congratulation!').should('not.exist')
   })
-  
+
 
 })
 
-  
+

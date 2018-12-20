@@ -1,0 +1,6 @@
+[
+    { "amount": 30, "No": 3, "book_name": "blockchain1", "author": "zhongbencong1", "publisher_name": "publisher1", "price": 32}, 
+    { "amount": 30, "No": 4, "book_name": "blockchain2", "author": "zhongbencong2", "publisher_name": "publisher2", "price": 33},
+    { "amount": 30, "No": 5, "book_name": "blockchain3", "author": "zhongbencong3", "publisher_name": "publisher3", "price": 34}, 
+    { "amount": 30, "No": 6, "book_name": "blockchain4", "author": "zhongbencong4", "publisher_name": "publisher4", "price": 35}
+]

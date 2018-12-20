@@ -1,25 +1,6 @@
 /* eslint-disable no-undef */
 describe('Manage Books page', () => {
-  beforeEach(() => {
-    cy.fixture('books')
-      .then((books) => {
-        books.forEach(() => {
-          cy.request('DELETE',
-            'https://nmgb.herokuapp.com/books/')
-        })
-      })
-    cy.fixture('books')
-      .then((books) => {
-        books.forEach((book) => {
-          cy.request('POST',
-            'https://nmgb.herokuapp.com/books/', book)
-        })
-      })
-    cy.visit('/')
-    // Click Manage Books navbar link
-    cy.get('.navbar-nav:nth-child(1)')
-      .find('.nav-item:nth-child(2)').click()
-  })
+  
 
   it('allows a book to be deleted', () => {
     cy.get('tbody').find('tr').should('have.length', 4)

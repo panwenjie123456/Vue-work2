@@ -17,7 +17,7 @@ export default {
   fetchBooktype (id) {
     return Api().get(`/booktype/${id}`)
   },
-  putBooktype (id, booktype) {
+  update (id, booktype) {
     console.log('REQUESTING ' + booktype._id + ' ' +
       JSON.stringify(booktype, null, 5))
     return Api().put(`/booktype/${id}`, booktype,

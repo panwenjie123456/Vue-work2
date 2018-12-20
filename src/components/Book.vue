@@ -4,7 +4,7 @@
     <div id="app1">
       <v-client-table :columns="columns" :data="book" :options="options">
         <a slot="amountadd" slot-scope="props" class="fa fa-thumbs-up fa-2x" @click="amountadd(props.row._id)"></a>
-        <a slot="edit" slot-scope="props" class="fa fa-edit fa-2x" @click="editBook(props.row._id)"></a>
+        <a slot="editbook" slot-scope="props" class="fa fa-edit fa-2x" @click="editBook(props.row._id)"></a>
         <a slot="remove" slot-scope="props" class="fa fa-trash-o fa-2x" @click="deleteBook(props.row._id)"></a>
       </v-client-table>
     </div>
@@ -26,7 +26,7 @@ export default {
       book: [],
       props: ['_id'],
       errors: [],
-      columns: ['_id', 'No', 'book_name', 'author', 'publisher_name', 'price', 'amount', 'amountadd', 'edit', 'remove'],
+      columns: ['_id', 'No', 'book_name', 'author', 'publisher_name', 'price', 'amount', 'amountadd', 'editbook', 'remove'],
       options: {
         perPage: 10,
         // eslint-disable-next-line
@@ -73,7 +73,7 @@ export default {
     },
     editBook: function (id) {
       this.$router.params = id
-      this.$router.push('edit')
+      this.$router.push('editbook')
     },
     deleteBook: function (id) {
       this.$swal({

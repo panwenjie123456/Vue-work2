@@ -10,6 +10,10 @@
           <b-nav-item to="/#"><i class="fa fa-home" style="padding: 5px"> Home</i></b-nav-item>
           <b-nav-item to="/books"><i class="fa fa-list" style="padding: 5px"> Manage Books</i></b-nav-item>
           <b-nav-item data-test="Newbookbtn" to="/Newbook"><i class="fa fa-money" style="padding: 5px"> New Book</i></b-nav-item>
+          <b-nav-item to="/booktype"><i class="fa fa-list" style="padding: 5px"> Manage Booktype</i></b-nav-item>
+          <b-nav-item data-test="Newbooktypebtn" to="/Newbooktype"><i class="fa fa-money" style="padding: 5px"> New Booktype</i></b-nav-item>
+          <b-nav-item to="/publisher"><i class="fa fa-list" style="padding: 5px"> Manage publishers</i></b-nav-item>
+          <b-nav-item data-test="Newpublisherbtn" to="/Newpublisher"><i class="fa fa-money" style="padding: 5px"> New publisher</i></b-nav-item>
           <b-nav-item to="/map"><i class="fa fa-globe" style="padding: 5px"> Map</i></b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">

@@ -3,8 +3,8 @@
     <h3 class="vue-title"><i class="fa fa-list" style="padding: 3px"></i>{{messagetitle}}</h3>
     <div id="app1">
       <v-client-table :columns="columns" :data="booktype" :options="options">
-        <a slot="upvote" slot-scope="props" class="fa fa-thumbs-up fa-2x" @click="upvote(props.row._id)"></a>
-        <a slot="edit" slot-scope="props" class="fa fa-edit fa-2x" @click="editBooktype(props.row._id)"></a>
+        <a slot="upvote" slot-scope="props" class="fa fa-thumbs-up fa-2x" @click="amountadd(props.row._id)"></a>
+        <a slot="editbooktype" slot-scope="props" class="fa fa-edit fa-2x" @click="editBooktype(props.row._id)"></a>
         <a slot="remove" slot-scope="props" class="fa fa-trash-o fa-2x" @click="deleteBooktype(props.row._id)"></a>
       </v-client-table>
     </div>
@@ -23,14 +23,14 @@ export default {
   data () {
     return {
       messagetitle: ' Booktype List ',
-      books: [],
+      booktype: [],
       props: ['_id'],
       errors: [],
-      columns: ['_id', 'book_name', 'type_no', 'description', 'edit', 'remove'],
+      columns: ['_id', 'book_name', 'type_no', 'description', 'editbooktype', 'remove'],
       options: {
         perPage: 10,
         // eslint-disable-next-line
-        filterable: ['_id', 'book_name', 'type_no', 'description' ],
+        filterable: ['book_name', 'type_no' ],
         sortable: ['_id'],
         headings: {
           _id: 'ID',
@@ -71,7 +71,7 @@ export default {
     },
     editBooktype: function (id) {
       this.$router.params = id
-      this.$router.push('edit')
+      this.$router.push('editbooktype')
     },
     deleteBooktype: function (id) {
       this.$swal({

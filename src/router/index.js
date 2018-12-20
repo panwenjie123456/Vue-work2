@@ -13,10 +13,12 @@ import Maps from '@/components/GoogleMap'
 import Editbook from '@/components/Editbook'
 import Editbooktype from '@/components/Editbooktype'
 import Editpublisher from '@/components/Editpublisher'
+import Auth from '@/components/Auth'
+import Dashboard from '@/components/Dashboard'
+import auth from '@/auth'
 Vue.use(Router)
 
-export default new Router({
-  routes: [
+var routes = [
     {
       path: '/',
       name: 'Home',
@@ -84,6 +86,21 @@ export default new Router({
       name: 'Editpublisher',
       component: Editpublisher,
       props: true
-    }
+    },
+    { path: '/auth', name: 'auth', component: Auth, meta: { guestOnly: true } },
+    { path: '/dashboard', name: 'dashboard', component: Dashboard, meta: { requireAuth: true } }
   ]
+  export const router = new Router({
+    mode: 'history',
+    routes
+  })
+
+  router.beforeEach((to, from, next) => {
+  let currentUser = auth.user()
+  let requireAuth = to.matched.some(record => record.meta.requireAuth)
+  let guestOnly = to.matched.some(record => record.meta.guestOnly)
+
+  if (requireAuth && !currentUser) next('auth')
+  else if (guestOnly && currentUser) next('dashboard')
+  else next()
 })

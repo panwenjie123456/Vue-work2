@@ -1,12 +1,15 @@
 import Vue from 'vue'
 import App from './App'
-import router from './router'
+
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import VueSweetalert2 from 'vue-sweetalert2'
 
+import {router} from '@/router'
+import {store} from '@/store'
+import auth from '@/auth'
 Vue.use(BootstrapVue)
 Vue.use(VueSweetalert2)
 
@@ -22,7 +25,11 @@ Vue.use(VueGoogleMaps, {
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
-  components: { App },
-  template: '<App/>'
+  beforeCreate () {
+    auth.init(this)
+  },
+  template: '<App/>',
+  components: { App }
 })

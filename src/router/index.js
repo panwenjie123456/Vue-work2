@@ -13,8 +13,6 @@ import Maps from '@/components/GoogleMap'
 import Editbook from '@/components/Editbook'
 import Editbooktype from '@/components/Editbooktype'
 import Editpublisher from '@/components/Editpublisher'
-import signUp from '@/components/signUp'
-import login from '@/components/login'
 Vue.use(Router)
 
 export default new Router({
@@ -86,16 +84,6 @@ export default new Router({
       name: 'Editpublisher',
       component: Editpublisher,
       props: true
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: login
-    },
-    {
-      path: '/sign-up',
-      name: 'signUp',
-      component: signUp
     }
   ]
 })

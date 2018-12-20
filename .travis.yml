@@ -11,7 +11,7 @@ script:
 deploy:
   provider: surge
   skip_cleanup: true
-  domain: placid-parent.surge.sh
+  domain: weary-smoke.surge.sh
   project: ./dist
   on:
      branch: master

@@ -1,6 +1,17 @@
 <template>
   <div class="hero">
     <h3 class="vue-title"><i class="fa fa-comment" style="padding: 3px"></i>{{messagetitle}}</h3>
+    <table align="center">
+      <tr>
+        <td>
+          <p class="lead"><b><i>contact-no:</i></b>
+          <p>xxx-xxxxxxx</p>
+        </td>
+        <td>
+          <img src="../assets/book.gif" alt="description here" />
+        </td>
+      </tr>
+    </table>
   </div>
 </template>
 

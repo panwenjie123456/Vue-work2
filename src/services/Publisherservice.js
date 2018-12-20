@@ -8,9 +8,6 @@ export default {
     return Api().post('/publisher', publisher,
       { headers: {'Content-type': 'application/json'} })
   },
-  upvotePublisher (id) {
-    return Api().put(`/publisher/${id}/add`)
-  },
   deletePublisher (id) {
     return Api().delete(`/publisher/${id}`)
   },

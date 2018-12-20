@@ -57,18 +57,6 @@ export default {
           console.log(error)
         })
     },
-    upvote: function (id) {
-      Booktypeservice.upvoteBooktype(id)
-        .then(response => {
-          // JSON responses are automatically parsed.
-          this.loadBooktype()
-          console.log(response)
-        })
-        .catch(error => {
-          this.errors.push(error)
-          console.log(error)
-        })
-    },
     editBooktype: function (id) {
       this.$router.params = id
       this.$router.push('editbooktype')

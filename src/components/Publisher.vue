@@ -3,7 +3,7 @@
     <h3 class="vue-title"><i class="fa fa-list" style="padding: 3px"></i>{{messagetitle}}</h3>
     <div id="app1">
       <v-client-table :columns="columns" :data="publisher" :options="options">
-        <a slot="edit" slot-scope="props" class="fa fa-edit fa-2x" @click="editPublisher(props.row._id)"></a>
+        <a slot="editpublisher" slot-scope="props" class="fa fa-edit fa-2x" @click="editPublisher(props.row._id)"></a>
         <a slot="remove" slot-scope="props" class="fa fa-trash-o fa-2x" @click="deletePublisher(props.row._id)"></a>
       </v-client-table>
     </div>
@@ -25,7 +25,7 @@ export default {
       publisher: [],
       props: ['_id'],
       errors: [],
-      columns: ['_id', 'publisher_name', 'location', 'year', 'edit', 'remove'],
+      columns: ['_id', 'publisher_name', 'location', 'year', 'editpublisher', 'remove'],
       options: {
         perPage: 10,
         // eslint-disable-next-line
@@ -58,7 +58,7 @@ export default {
     },
     editPublisher: function (id) {
       this.$router.params = id
-      this.$router.push('edit')
+      this.$router.push('editpublisher')
     },
     deletePublisher: function (id) {
       this.$swal({

@@ -11,7 +11,7 @@
           <p>the Newbook page and do the update</p>
         </td>
         <td>
-          <img src="../assets/homer.gif" alt="description here" />
+          <img src="../assets/book.gif" alt="description here" />
         </td>
       </tr>
     </table>

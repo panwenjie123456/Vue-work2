@@ -10,7 +10,7 @@
 </template>
 
 <script>
-//import firebase from 'firebnpm webpack --config build/webpack.custom.prod.config.jsase'
+import firebase from 'firebase'
 export default {
   name: "Login",
   data(){

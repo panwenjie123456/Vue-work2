@@ -15,7 +15,7 @@ describe('Manage Books page', () => {
             'https://nmgb.herokuapp.com/books/', book)
         })
       })
-    cy.visit('http://makeshift-mine.surge.sh')
+    cy.visit('http://handsomely-basket.surge.sh')
     // Click Manage Books navbar link
     cy.get('.navbar-nav:nth-child(1)')
       .find('.nav-item:nth-child(2)').click()

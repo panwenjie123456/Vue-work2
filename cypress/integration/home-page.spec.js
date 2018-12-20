@@ -26,7 +26,6 @@ describe('Home page', () => {
       cy.get('.navbar-nav:nth-child(2)').within(() => {
         cy.get('.nav-item:first').should('contain', 'About')
         cy.get('.nav-item:nth-child(2)').should('contain', 'Contact')
-        cy.get('.nav-item:nth-child(3)').should('contain', 'Login')
         
       })
     })
